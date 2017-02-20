@@ -1,3 +1,44 @@
+# 参考
+
+https://github.com/angular/material2/blob/master/guides/getting-started.md
+
+https://medium.com/codingthesmartway-com-blog/using-material-design-in-angular-2-83a3128c58b7#.hb9htrqzz
+
+# 作業工程
+
+`$ npm install --save @angular/material`
+
+src/app/app.module.tsを編集
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+
+// ADD
+import { MaterialModule } from '@angular/material';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    // ADD
+    MaterialModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+
 # YokohamaSenryu
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
