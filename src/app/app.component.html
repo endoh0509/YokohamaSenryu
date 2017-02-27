@@ -1,14 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <h1>
+    {{title}}
+  </h1>
+</header>
 
+<md-card>
 
-<!--<sebm-google-map [latitude]="lat" [longitude]="lng">-->
-  <!--<sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>-->
-<!--</sebm-google-map>-->
-<app-senryu-map></app-senryu-map>
+  <app-senryu-map></app-senryu-map>
 
-<div class="app-content">
+  <!--<style>-->
+    <!--#testMap {-->
+      <!--/*height: 500px;*/-->
+      <!--height: 80%;-->
+      <!--width: 100%;-->
+      <!--margin: 0;-->
+      <!--background-color: rgba(255, 0, 0, 0.5);-->
+      <!--text-align: center;-->
+      <!--font-size: 100pt;-->
+    <!--}-->
+  <!--</style>-->
+  <!--<div id='testMap'> Map</div>-->
+
+</md-card>
+
+<!--<div class="app-content">-->
   <md-card>
     <button md-button>FLAT</button>
     <button md-raised-button>RAISED</button>
@@ -34,7 +49,7 @@
     <button md-raised-button disabled>OFF</button>
     <button md-mini-fab disabled><md-icon>check</md-icon></button>
   </md-card>
-</div>
+<!--</div>-->
 
 <md-card>
   <button md-button>FLAT</button>
@@ -51,3 +66,7 @@
 
   <button md-raised-button (click)="title = 'Clicked!'">CLICK</button>
 </md-card>
+
+<footer>
+  footer
+</footer>

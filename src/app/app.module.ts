@@ -13,6 +13,7 @@ import {MdCardModule} from '@angular2-material/card';
 import {MdButtonModule} from '@angular2-material/button';
 import {MdIconModule} from '@angular2-material/icon';
 import {MdIconRegistry} from '@angular2-material/icon';
+import {MdInputModule} from '@angular2-material/input';
 
 // https://angular-maps.com/docs/getting-started.html
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -20,6 +21,8 @@ var API_KEY = 'AIzaSyAlK1Zht4CUW9GdsLkwJ2SvB7hwBbjR2wg';
 
 import {stringDistance} from "codelyzer/util/utils";
 import { SenryuMapComponent } from './senryu-map/senryu-map.component';
+
+// import { JsonApiModule } from 'angular2-jsonapi';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { SenryuMapComponent } from './senryu-map/senryu-map.component';
     AgmCoreModule.forRoot({  //ADD
       apiKey: API_KEY
     }),
-    MdCardModule, MdButtonModule, MdIconModule  //ADD
+    // JsonApiModule,
+    MdCardModule, MdButtonModule, MdIconModule, MdInputModule  //ADD
   ],
   providers: [ MdIconRegistry ],  //ADD
   bootstrap: [AppComponent]

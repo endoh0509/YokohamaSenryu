@@ -1,7 +1,48 @@
-<p>
-  senryu-map works!
-</p>
+<style>
+  .senryuText{
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    height: 16em;
+    background-color: #F2F2F2;
+    padding: 10px;
+  }
+</style>
 
-<sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+<h1>
+  Map
+</h1>
+
+<md-input placeholder="keyword" align="start" [ngModel]="test" (keypress)="searchBtnFunc($event)" (ngModelChange)="valueChange($event)">
+  <span md-prefix>
+    <i class="material-icons">search</i>
+  </span>
+</md-input>
+{{test}}
+
+<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <!--<sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>-->
+  <sebm-google-map-marker
+    *ngFor="let senryu of senryuList; let i = index;"
+    (markerClick)="clickedMarker(senryu.label, i)"
+    [latitude]="senryu.lat"
+    [longitude]="senryu.lng"
+    [label]="senryu.label"
+    animation='2'
+  >
+    <sebm-google-map-info-window>
+      <div style="padding: 13px 13px 13px 13px; background-image: url('./assets/images/japanese-paper.jpg'); background-repeat: repeat;">
+        <div class="senryuText">
+          <div style="text-align: left">{{senryu.top}}</div>
+          <div style="text-align: center">{{senryu.middle}}</div>
+          <div style="text-align: right">{{senryu.bottom}}</div>
+          <div style="text-align: right; color: #d94236;">{{senryu.member}}</div>
+        </div>
+      </div>
+    </sebm-google-map-info-window>
+
+  </sebm-google-map-marker>
 </sebm-google-map>
+
+<!-- DEBUG -->
+<!--{{senryuList}}-->
