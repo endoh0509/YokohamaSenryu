@@ -65,6 +65,7 @@ export class SenryuMapComponent implements OnInit {
   searchKeyword: string = '';
 
   constructor(public service: SenryuMapService) {
+    // this.milk = new MilkCocoa.connectWithApiKey('your-app-id.mlkcca.com', 'API_Key', 'API_Secret');
   }
 
   clickedMarker(label: string, index: number) {

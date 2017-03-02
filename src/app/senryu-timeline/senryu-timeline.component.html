@@ -1,0 +1,26 @@
+<!--<md-content>-->
+  <md-list flex>
+    <!--<md-subheader class="md-no-sticky">3 line item (with hover)-->
+    <!--</md-subheader>-->
+
+    <md-list-item *ngFor="let senryu of senryuList; let i = index;" ng-click="null">
+      <!--<md-card>-->
+        <!--<h3 md-line> {{message.from}} </h3>-->
+        <h3 md-line>
+          {{senryu.member}}
+        </h3>
+        <p md-line>
+          {{senryu.top}}
+          {{senryu.middle}}
+          {{senryu.bottom}}
+        </p>
+        <p md-line>
+          {{senryu.insTime}}
+        </p>
+      <!--</md-card>-->
+    </md-list-item>
+
+    <!--<md-list-item *ngFor="let senryu of senryuList; let i = index;">-->
+    <!--</md-list-item>-->
+  </md-list>
+<!--</md-content>-->
