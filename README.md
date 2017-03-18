@@ -1,5 +1,9 @@
 
+# 実行
 
+```
+$ npm run ng serve
+```
 
 
 
