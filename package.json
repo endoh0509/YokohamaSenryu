@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng": "ng",
+    "ng": "./node_modules/.bin/ng",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
     "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" ",
     "test": "ng test",
