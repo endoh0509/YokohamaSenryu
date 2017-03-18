@@ -1,46 +1,51 @@
-<header>
-  <h1>
+<!--<header>-->
+  <!--<h1>-->
+    <!--{{title}}-->
+  <!--</h1>-->
+
+<!--</header>-->
+
+<div style="height: 100%;">
+  <md-toolbar>
     {{title}}
-  </h1>
-
-</header>
+  </md-toolbar>
 
 
-<md-tab-group>
-  <md-tab label="Timeline">
-    <template md-tab-label>Timeline</template>
-    <template md-tab-content>
+  <md-tab-group>
+    <md-tab label="Timeline">
+      <template md-tab-label>Timeline</template>
+      <template md-tab-content>
 
-      <app-senryu-timeline></app-senryu-timeline>
+        <app-senryu-timeline></app-senryu-timeline>
 
-    </template>
-  </md-tab>
+      </template>
+    </md-tab>
 
-  <md-tab label="Map">
-    <template md-tab-label>Map</template>
-    <template md-tab-content>
+    <md-tab label="Map">
+      <template md-tab-label>Map</template>
+      <template md-tab-content>
 
-      <!--<md-card>-->
-        <app-senryu-map></app-senryu-map>
+        <!--<md-card>-->
+          <app-senryu-map></app-senryu-map>
 
-        <!--<style>-->
-        <!--#testMap {-->
-        <!--/*height: 500px;*/-->
-        <!--height: 80%;-->
-        <!--width: 100%;-->
-        <!--margin: 0;-->
-        <!--background-color: rgba(255, 0, 0, 0.5);-->
-        <!--text-align: center;-->
-        <!--font-size: 100pt;-->
-        <!--}-->
-        <!--</style>-->
-        <!--<div id='testMap'> Map</div>-->
-      <!--</md-card>-->
+          <!--<style>-->
+          <!--#testMap {-->
+          <!--/*height: 500px;*/-->
+          <!--height: 80%;-->
+          <!--width: 100%;-->
+          <!--margin: 0;-->
+          <!--background-color: rgba(255, 0, 0, 0.5);-->
+          <!--text-align: center;-->
+          <!--font-size: 100pt;-->
+          <!--}-->
+          <!--</style>-->
+          <!--<div id='testMap'> Map</div>-->
+        <!--</md-card>-->
 
-    </template>
-  </md-tab>
-</md-tab-group>
-
+      </template>
+    </md-tab>
+  </md-tab-group>
+</div>
 <!--<md-card>-->
   <!--<button md-button>FLAT</button>-->
   <!--<button md-raised-button>RAISED</button>-->

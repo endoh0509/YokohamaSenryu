@@ -1,26 +1,197 @@
+
+<!-- アニメーションテスト -->
+<button md-raised-button class="btn" [@flyInOut]="state" (click)="onClick()">
+  <md-icon class="md-24">favorite</md-icon>
+</button>
+
+
+
+<style>
+  .vLayout{
+    width: 100%;
+    height: 100%;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+  }
+
+  .senryuCard{
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 13px 13px 13px 13px;
+    text-align: center;
+    width: 30%;
+
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    overflow: inherit;
+
+    /*background-color: #00ff00;*/
+    background-image: url('./assets/images/japanese-paper.jpg');
+    background-repeat: repeat;
+  }
+  .senryuCardText{
+    text-align: center;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    /*height: 16em;*/
+    background-color: #F2F2F2;
+    padding: 10px;
+    width: calc(100% - 26px);
+    /*margin-bottom: auto;*/
+    /*margin-top: auto;*/
+  }
+  .senryuParts{
+    width: 23%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<div class="vLayout">
+
+  <md-card class="senryuCard" *ngFor="let senryu of senryuList; let i = index;">
+    <div class="senryuCardText">
+      <div class="senryuParts">{{senryu.top}}</div><br>
+      <div class="senryuParts">{{senryu.middle}}</div><br>
+      <div class="senryuParts">{{senryu.bottom}}</div><br>
+      <div class="memberName">{{senryu.member}}</div>
+    </div>
+  </md-card>
+
+    <!--<md-card class="senryuCard">-->
+      <!--<div class="senryuCardText">-->
+        <!--<div class="senryuParts">あいうえお</div><br>-->
+        <!--<div class="senryuParts">かきくけこ</div><br>-->
+        <!--<div class="senryuParts">さしすせそ</div><br>-->
+        <!--<div class="memberName">テス男</div>-->
+      <!--</div>-->
+    <!--</md-card>-->
+    <!--<md-card class="senryuCard">-->
+      <!--<div class="senryuCardText">-->
+        <!--<div class="senryuParts">あいうえお</div><br>-->
+        <!--<div class="senryuParts">かきくけこ</div><br>-->
+        <!--<div class="senryuParts">さしすせそ</div><br>-->
+        <!--<div class="memberName">テス男</div>-->
+      <!--</div>-->
+    <!--</md-card>-->
+    <!--<md-card class="senryuCard">-->
+      <!--<div class="senryuCardText">-->
+        <!--<div class="senryuParts">あいうえお</div><br>-->
+        <!--<div class="senryuParts">かきくけこ</div><br>-->
+        <!--<div class="senryuParts">さしすせそ</div><br>-->
+        <!--<div class="memberName">テス男</div>-->
+      <!--</div>-->
+    <!--</md-card>-->
+</div>
+
+
+<!--<div style="height: 500px;">-->
+  <!--<md-grid-list cols="3" rowHeight="100%">-->
+    <!--<md-grid-tile-->
+      <!--*ngFor="let tile of tiles"-->
+      <!--[colspan]="tile.cols"-->
+      <!--[rowspan]="tile.rows"-->
+      <!--[style.background]="tile.color">-->
+      <!--{{tile.text}}-->
+    <!--</md-grid-tile>-->
+  <!--</md-grid-list>-->
+<!--</div>-->
+
+<!--<md-sidenav-layout>-->
+
+  <!--<md-sidenav #start (open)="mybutton.focus()">-->
+    <!--Start Sidenav.-->
+    <!--<br>-->
+    <!--<button md-button #mybutton (click)="start.close()">Close</button>-->
+  <!--</md-sidenav>-->
+
+  <!--<md-sidenav #end align="end">-->
+    <!--End Sidenav.-->
+    <!--<button md-button (click)="end.close()">Close</button>-->
+  <!--</md-sidenav>-->
+
+  <!--My regular content. This will be moved into the proper DOM at runtime.-->
+<!--</md-sidenav-layout>-->
+
+  <!--<md-card style="height: auto;" *ngFor="let senryu of senryuList; let i = index;" ng-click="null">-->
+    <!--&lt;!&ndash;<h3 md-line> {{message.from}} </h3>&ndash;&gt;-->
+    <!--<h3>-->
+      <!--{{senryu.member}}-->
+    <!--</h3>-->
+    <!--<p>-->
+      <!--{{senryu.top}}-->
+      <!--{{senryu.middle}}-->
+      <!--{{senryu.bottom}}-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--{{senryu.insTime}}-->
+    <!--</p>-->
+  <!--</md-card>-->
+
+
 <!--<md-content>-->
-  <md-list flex>
-    <!--<md-subheader class="md-no-sticky">3 line item (with hover)-->
-    <!--</md-subheader>-->
+<!--<md-subheader class="md-no-sticky">3 line item (with hover)-->
+<!--</md-subheader>-->
 
-    <md-list-item *ngFor="let senryu of senryuList; let i = index;" ng-click="null">
-      <!--<md-card>-->
-        <!--<h3 md-line> {{message.from}} </h3>-->
-        <h3 md-line>
-          {{senryu.member}}
-        </h3>
-        <p md-line>
-          {{senryu.top}}
-          {{senryu.middle}}
-          {{senryu.bottom}}
-        </p>
-        <p md-line>
-          {{senryu.insTime}}
-        </p>
-      <!--</md-card>-->
-    </md-list-item>
 
-    <!--<md-list-item *ngFor="let senryu of senryuList; let i = index;">-->
-    <!--</md-list-item>-->
-  </md-list>
+<!--<div ng-controller="AppCtrl as ctrl" ng-cloak>-->
+<!--<md-content layout="column">-->
+<!--<p>-->
+<!--Display 1000 item in a virtual-list with viewport of only 16 columns (width=50px).-->
+<!--<br/><br/>-->
+<!--This demo shows scroll and rendering performance gains when using <code>md-virtual-repeat</code>;-->
+<!--achieved with the dynamic reuse of rows visible in the viewport area. Developers are required to-->
+<!--explicitly use <code>md-virtual-repeat-container</code> as a wrapping parent container.-->
+<!--</p>-->
+
+<!--<md-virtual-repeat-container id="horizontal-container" md-orient-horizontal>-->
+<!--<div md-virtual-repeat="senryu of senryuList"-->
+<!--class="repeated-item" flex>-->
+<!--{{senryu.member}}-->
+<!--</div>-->
+<!--</md-virtual-repeat-container>-->
+<!--</md-content>-->
+<!--</div>-->
+
+<!--<md-content layout="column">-->
+<!--<md-card style="height: auto;" *ngFor="let senryu of senryuList; let i = index;" ng-click="null">-->
+<!--&lt;!&ndash;<h3 md-line> {{message.from}} </h3>&ndash;&gt;-->
+<!--<h3>-->
+<!--{{senryu.member}}-->
+<!--</h3>-->
+<!--<p>-->
+<!--{{senryu.top}}-->
+<!--{{senryu.middle}}-->
+<!--{{senryu.bottom}}-->
+<!--</p>-->
+<!--<p>-->
+<!--{{senryu.insTime}}-->
+<!--</p>-->
+<!--</md-card>-->
+<!--</md-content>-->
+
+<!--<md-list flex>-->
+<!--<md-list-item *ngFor="let senryu of senryuList; let i = index;" ng-click="null">-->
+<!--<md-card style="height: 30px;" md-line>-->
+<!--&lt;!&ndash;<h3 md-line> {{message.from}} </h3>&ndash;&gt;-->
+<!--<h3 md-line>-->
+<!--{{senryu.member}}-->
+<!--</h3>-->
+<!--<p md-line>-->
+<!--{{senryu.top}}-->
+<!--{{senryu.middle}}-->
+<!--{{senryu.bottom}}-->
+<!--</p>-->
+<!--<p md-line>-->
+<!--{{senryu.insTime}}-->
+<!--</p>-->
+<!--</md-card>-->
+<!--</md-list-item>-->
+
+<!--<md-list-item *ngFor="let senryu of senryuList; let i = index;">-->
+<!--</md-list-item>-->
+<!--</md-list>-->
 <!--</md-content>-->

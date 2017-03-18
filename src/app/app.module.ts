@@ -16,8 +16,13 @@ import {MdIconRegistry} from '@angular2-material/icon';
 import {MdInputModule} from '@angular2-material/input';
 import {MdTabsModule} from '@angular2-material/tabs';
 import {MdListModule} from '@angular2-material/list';
+import {MdToolbarModule} from '@angular2-material/toolbar';
+import {MdSidenavModule} from '@angular2-material/sidenav';
+import {MdGridListModule} from '@angular2-material/grid-list';
 
-import {} from '@angular2-material/t';
+
+// import { mdContentDirective } from 'node_modules/angular-material/modules/js/content/content.js';
+
 
 // https://angular-maps.com/docs/getting-started.html
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -43,7 +48,8 @@ import { SenryuTimelineComponent } from './senryu-timeline/senryu-timeline.compo
       apiKey: API_KEY
     }),
     // JsonApiModule,
-    MdCardModule, MdButtonModule, MdIconModule, MdInputModule, MdTabsModule, MdListModule  //ADD
+    MdCardModule, MdButtonModule, MdIconModule, MdInputModule,
+    MdTabsModule, MdListModule, MdSidenavModule, MdToolbarModule, MdGridListModule  //ADD
   ],
   providers: [ MdIconRegistry ],  //ADD
   bootstrap: [AppComponent]
